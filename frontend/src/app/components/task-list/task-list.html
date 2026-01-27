@@ -1,0 +1,30 @@
+<div>
+  <h1>Mis tareas</h1>
+  <div *ngIf="tasks.length === 0">
+    <p>No hay tareas disponibles.</p>
+  </div>
+
+  <div *ngIf="tasks.length > 0">
+    <ul>
+      <li *ngFor="let task of tasks">
+        <strong>{{task.title}}</strong>
+        <p>{{task.description}}</p>
+        <p>Obligatoria: {{task.mandatory ? 'Sí' : 'No'}}</p>
+        <p>Estado: {{task.state}}</p>
+        <p>Fecha límite: {{task.duedate}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div>
+    <h2>Agregar tarea</h2>
+    <input type="text" placeholder="Título" [(ngModel)]="newTaskTitle">
+    <input type="checkbox" [(ngModel)]="newTaskMandatory"> Obligatoria
+    <input type="date" [(ngModel)]="newTaskDueDate">
+    <input type="number" placeholder="Estado" [(ngModel)]="newTaskState">
+    <textarea placeholder="Descripción" [(ngModel)]="newTaskDescription"></textarea>
+    <button (click)="addTask()">Agregar</button>
+  </div>
+
+
