@@ -1,0 +1,110 @@
+.sidebar-inner {
+    display:flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.todo-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #4a152c;
+    margin-bottom: 10px;
+}
+
+.todo-logo mat-icon {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #ff85a1;
+}
+
+.brand-icon {
+    color: #ff85a1;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 25px;
+    padding: 20px;    
+    box-shadow: 0 4px 12px rgba(255, 133, 161, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+ }   
+
+.avatar {
+    display: block !important;
+    width: 100px !important;
+    height: 100px !important;
+    border: 5px solid pink !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.user-name {
+    font-weight: 700;
+    color: #4a152c;
+    display:block;
+    font-size: 1rem;
+}
+
+.user-email {
+    font-size: 0.75rem;
+    color: #ff85a1;;
+    display: block;
+}
+
+.settings-btn {
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+.settings-btn mat-icon{
+    font-size: 20px;
+}
+
+.progress-container {
+    margin-top: 15px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--pink-text);
+    margin-bottom: 6px;
+}
+
+.streak-badge {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 15px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a152c;
+}
+
+::ng-deep .mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: var(--pink-main);
+    --mdc-linear-progress-track-color: white;
+    height: 8px !important;
+    border-radius: 4px;
+}

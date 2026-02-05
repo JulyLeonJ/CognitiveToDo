@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MainLayout } from './components/main-layout/main-layout';
 import { TaskList } from './components/task-list/task-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TaskList],
+  imports: [MainLayout, TaskList],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

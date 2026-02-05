@@ -1,1 +1,18 @@
-<p>main-layout works!</p>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened ="true" class="sidenav-usuario">
+      <div class ="perfil-usuario">
+       <p><button class=btn-toggle-rosa matButton (click)="sidenav.toggle()">Buenasss</button></p>
+      </div>
+      <profile-layout></profile-layout>
+
+      <nav class="navegacion-usuario"></nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p><button matButton (click)="sidenav.toggle()">Pulsa Aquí</button></p>
+      <ng-content class="contenido-container">
+        <router-outlet></router-outlet>
+      </ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
